@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADM - Ensalamento Anhanguera Catuaí</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="matutino.js"></script>
+</head>
+
+<body>
+
+  <header>
+  </header>
+
+  <main>
+    <!-- Barra de ferramentas superior -->
+    <section class="w3-panel w3-center">
+      <form id="form-pesquisa">
+        <button id="btn-adicionar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large"><i
+        class="material-icons">add</i></button>
+
+        <input id="pesquisa" class="w3-border w3-padding-small" type="text" name="pesquisa"
+          placeholder="Disciplina, professor ou dia da semana" required>
+
+        <button id="btn-pesquisar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large" type="submit"><i
+          class="material-icons">search</i></button>
+      </form>
+    </section>
+
+    <!-- Painel da lista -->
+    <section class="w3-panel w3-responsive">
+      <article id="msg-listar"></article>
+      <table id="lista-cadastro" class="w3-table w3-striped w3-hoverable w3-small">
+        <thead>
+          <tr class="w3-deep-orange">
+            <th>&nbsp;AÇÕES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Disciplina</th>
+            <th>Dia</th>
+            <th>Professor</th>
+            <th>Sala</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Painel do formulário -->
+    <section class="w3-panel">
+      <!-- Fundo da janela modal -->
+      <div id="painel-formulario" class="w3-modal w3-animate-opacity">
+        <!-- Janela modal -->
+        <div class="w3-modal-content w3-card-4">
+          <form id="formulario" class="Adicionar">
+            <!-- Campos -->
+            <main class="w3-container">
+              <input type="hidden" id="id">
+              <br>
+              <div class="campo-form">
+                <label for="disciplina"><b>Nome da </b>Disciplina</label>
+                <textarea class="w3-input" name="disciplina" id="disciplina" rows="3" placeholder="Permite letras, números e símbolos; Requer preenchimento." required></textarea>
+              </div>
+              <div class="campo-form">
+                <label for="professor"><b>Nome do </b>Professor</label>
+                <input class="w3-input" type="text" name="professor" id="professor" placeholder="Permite somente letras." >
+              </div>
+              <div class="campo-form">
+                <fieldset>
+                  <legend>Dia da semana</legend>
+                  <input type="radio" id="2af" name="diaDaSemana" value="2af" />
+                  <label for="2af">2af&nbsp;&nbsp;</label>
+                  <input type="radio" id="3af" name="diaDaSemana" value="3af" />
+                  <label for="3af">3af&nbsp;&nbsp;</label>
+                  <input type="radio" id="4af" name="diaDaSemana" value="4af" />
+                  <label for="4af">4af&nbsp;&nbsp;</label>
+                  <input type="radio" id="5af" name="diaDaSemana" value="5af" />
+                  <label for="5af">5af&nbsp;&nbsp;</label>
+                  <input type="radio" id="6af" name="diaDaSemana" value="6af" />
+                  <label for="6af">6af&nbsp;&nbsp;</label>
+                  <input type="radio" id="Sab" name="diaDaSemana" value="Sab" />
+                  <label for="Sab">Sáb</label>  
+              </fieldset>          
+              </div>
+              <div class="campo-form">
+                <label for="sala">Sala</label>
+                <input class="w3-input" type="text" name="sala" id="sala" placeholder="Permite letras, números e símbolos.">
+              </div>
+              <br>
+
+              <article id="msg-form"></article>
+            </main>
+            <!-- Botões -->
+            <footer class="w3-container w3-deep-orange w3-padding">
+              <button type="submit" id="btn-salvar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small">
+              <i class="material-icons">check</i></button>
+
+              <button id="btn-cancelar" class="w3-button w3-deep-orange w3-border w3-hover-orange w3-round-large w3-small"><i
+              class="material-icons">backspace</i></button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w3-bottom">
+    <div class="w3-bar w3-deep-orange">
+      <a href="matutino.html" class="w3-bar-item w3-button w3-small w3-hover-orange w3-amber"><i
+          class="material-icons">sunny</i><br>Matutino</a>
+      <a href="#" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
+          class="material-icons">sunny_snowing</i><br>Vespetino</a>
+      <a href="#" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
+          class="material-icons">nightlight</i><br>Noturno</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-small w3-hover-orange w3-right"><i
+          class="material-icons">settings</i><br>Confs</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
